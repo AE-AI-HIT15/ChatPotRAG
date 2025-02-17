@@ -2,10 +2,10 @@ import os
 import shutil
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from models import AskResponse , AskRequest
-from ask import ask_endpoint
-from documents import load_documents_from_csv, load_documents_from_txt
-from config import uploadfile_local, file_name_history, query_history
+from src.models import AskResponse , AskRequest
+from src.ask import ask_endpoint
+from src.documents import load_documents_from_csv, load_documents_from_txt
+from src.config import uploadfile_local, file_name_history, query_history
 
 app = FastAPI()
 

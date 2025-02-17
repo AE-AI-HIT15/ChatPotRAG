@@ -1,8 +1,8 @@
 import os
 import pandas as pd
 import faiss
-from config import global_docs, uploadfile_local, retrieval_model
-import config  
+from src.config import global_docs, uploadfile_local, retrieval_model
+import src.config  
 
 def build_faiss_index(docs):
     if not docs:
@@ -13,8 +13,8 @@ def build_faiss_index(docs):
     dimension = embeddings.shape[1]
 
     # **Update the FAISS index in config.py**
-    config.faiss_index = faiss.IndexFlatL2(dimension)
-    config.faiss_index.add(embeddings)
+    src.config.faiss_index = faiss.IndexFlatL2(dimension)
+    src.config.faiss_index.add(embeddings)
     
     
 

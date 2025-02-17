@@ -1,8 +1,8 @@
 # ask.py
 import re
-from config import query_history
-from models import AskRequest, AskResponse
-from RAG import retrieve, generate_answer
+from src.config import query_history
+from src.models import AskRequest, AskResponse
+from src.RAG import retrieve, generate_answer
 
 def ask(request: AskRequest) -> AskResponse:
     """
