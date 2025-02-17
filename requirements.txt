@@ -1,0 +1,10 @@
+os
+shutil
+fastapi
+fastapi.middleware.cors
+sentence_transformers 
+transformers 
+pandas 
+re
+uvicorn
+pydantic 

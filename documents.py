@@ -12,7 +12,7 @@ def build_faiss_index(docs):
     embeddings = retrieval_model.encode(docs, convert_to_tensor=False).astype("float32")
     dimension = embeddings.shape[1]
 
-    # Cập nhật FAISS index trong config.py
+    # **Update the FAISS index in config.py**
     config.faiss_index = faiss.IndexFlatL2(dimension)
     config.faiss_index.add(embeddings)
     
@@ -20,8 +20,9 @@ def build_faiss_index(docs):
 
 def load_documents_from_csv(csv_path, text_column="content"):
     """
-    Duyệt các file CSV trong thư mục uploadfile_local, đọc cột `text_column`
-    và cập nhật global_docs. Sau đó xây dựng FAISS index.
+    **Iterate through CSV files in the `uploadfile_local` directory, read the `text_column`,**  
+        - Update `global_docs`.  
+        - Then, build the FAISS index.
     """
     global global_docs
     global_docs = []
@@ -36,9 +37,9 @@ def load_documents_from_csv(csv_path, text_column="content"):
 
 def load_documents_from_txt(txt_file):
     """
-    Duyệt các file TXT trong thư mục uploadfile_local,
-    đọc nội dung theo từng dòng và chia đoạn khi gặp dấu chấm.
-    Nếu có dữ liệu hợp lệ, xây dựng FAISS index.
+    Iterate through TXT files in the `uploadfile_local` directory,  
+        - Read the content line by line and split the text into segments when encountering a period.  
+        - If valid data is found, build the FAISS index.
     """
     global global_docs
     docs = []

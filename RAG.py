@@ -4,8 +4,8 @@ from config import retrieval_model , tokenizer , generation_model
 
 def retrieve(query, k=1):
     """
-    Truy xuất k văn bản gần nhất với query từ FAISS index.
-    Nếu index chưa được xây dựng hoặc không có dữ liệu, trả về danh sách rỗng.
+   Retrieve the k most relevant documents to the query from the FAISS index.
+    - If the index has not been built or no data is found, return an empty list.
     """
     if config.faiss_index is None or len(config.global_docs) == 0:
         return []
@@ -16,9 +16,9 @@ def retrieve(query, k=1):
 
 def generate_answer(query, context):
     """
-    Sinh câu trả lời dựa trên query và context.
-    Tạo prompt, token hóa và gọi mô hình BART để sinh câu trả lời.
-    Sau đó giải mã output trả về câu trả lời cuối cùng.
+    Generate an answer based on the query and context:
+        - Create a prompt, tokenize it, and call the BART model to generate the answer.  
+        - Then, decode the output to return the final answer.
     """
     prompt = f"Question: {query}\nContext: {context}\nAnswer:"
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)

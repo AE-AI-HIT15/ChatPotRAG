@@ -9,13 +9,13 @@ from config import uploadfile_local, file_name_history, query_history
 
 app = FastAPI()
 
-# Cấu hình CORS
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Chấp nhận tất cả origin
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Cho phép tất cả phương thức
-    allow_headers=["*"],  # Chấp nhận tất cả header
+    allow_methods=["*"], 
+    allow_headers=["*"],  
 )
 
 @app.options("/ask")
@@ -25,10 +25,11 @@ async def options_handler():
 @app.post("/uploadfile/")
 async def upload_file(file: UploadFile = File(...)):
     """
-    Endpoint để người dùng upload file (CSV hoặc TXT).
-    - Lưu file vào thư mục uploadfile_local.
-    - Ghi nhận tên file vào file_name_history.
-    - Gọi load_documents_from_txt hoặc load_documents_from_csv dựa trên định dạng file.
+    Endpoint for users to upload files (CSV or TXT):
+
+        +Save the file to the uploadfile_local directory.
+        +Record the file name in file_name_history.
+        +Call load_documents_from_txt or load_documents_from_csv based on the file format.
     """
     file_path = os.path.join(uploadfile_local, file.filename)
     file_name_history.append(file.filename)
@@ -43,7 +44,7 @@ async def upload_file(file: UploadFile = File(...)):
 @app.post("/ask", response_model=AskResponse)
 async def submit_question(request: AskRequest ):
     """
-    Endpoint nhận câu hỏi từ người dùng.
+    Endpoint to receive questions from users.
     """
   
     response = ask_endpoint(request.query)
@@ -51,10 +52,10 @@ async def submit_question(request: AskRequest ):
 
 @app.get('/history_question')
 async def get_history():
-    """ Trả về lịch sử các câu hỏi đã được gửi. """
+    """ Return the history of questions that have been submitted. """
     return query_history
 
 @app.get('/file_name')
 async def get_file_name():
-    """ Trả về danh sách tên file đã được upload. """
+    """ Return the list of file names that have been uploaded. """
     return file_name_history
