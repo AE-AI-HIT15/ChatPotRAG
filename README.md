@@ -20,8 +20,8 @@ ChatPot là một sản phẩm tìm kiếm thông tin, có khả năng xử lý 
 
 * `Operating Systems: Windows`
 * `Python 3.6+`
-* html
-* VScode 
+* `html`
+* `VScode` 
 
 ## Thiết lập môi trường
 
