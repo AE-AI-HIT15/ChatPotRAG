@@ -20,6 +20,8 @@ ChatPot là một sản phẩm tìm kiếm thông tin, có khả năng xử lý 
 
 * `Operating Systems: Windows`
 * `Python 3.6+`
+* html
+* VScode 
 
 ## Thiết lập môi trường
 
@@ -32,7 +34,13 @@ https://github.com/AE-AI-HIT15/ChatPotRAG.git
 Tạo môi trường mới và cài đặt các gói liên quan
 
 ```
+pip install fastapi sentence-transformers transformers pandas uvicorn pydantic
 ```
+
+Cài đặt Live Server 
+
+* Mở VSCode và vào mục Extensions (hoặc nhấn Ctrl+Shift+X).
+* Tìm kiếm "Live Server" và nhấn Install.
 
 ## Hướng dẫn sử dụng
 
