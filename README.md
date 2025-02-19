@@ -16,7 +16,7 @@
 
 ChatPot là một sản phẩm tìm kiếm thông tin, có khả năng xử lý tài liệu được cung cấp để trích xuất câu trả lời. Khi bạn nhập tài liệu vào, hệ thống sẽ đọc và phân loại nội dung để đưa ra câu trả lời phù hợp. Sản phẩm này giúp cải thiện hiệu quả tìm kiếm và hỗ trợ quá trình tra cứu thông tin một cách trực tiếp.
 
-![](images/chatlog.png)
+![](images/Chatlog.png)
 
 ## Yêu cầu hệ thống
 
