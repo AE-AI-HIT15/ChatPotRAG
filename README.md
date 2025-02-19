@@ -1,4 +1,4 @@
-ChatPot Functionality:
+**ChatPot** Functionality:
 ChatPot helps read a document from a device (supports only .txt and .csv files). It can answer questions related to the content of the document.
 
 Answer Accuracy: ~69%
