@@ -26,7 +26,7 @@ ChatPot là một sản phẩm tìm kiếm thông tin, có khả năng xử lý 
 Tải project bằng cách sử dụng lệnh `git clone`
 
 ```
-
+https://github.com/AE-AI-HIT15/ChatPotRAG.git
 ```
 
 Tạo môi trường mới và cài đặt các gói liên quan
