@@ -46,7 +46,7 @@ Cài đặt Live Server
 
 Chạy chương trình chatbot trên VScode
 
-`**Bước 1: Khởi động backend**`
+**Bước 1: Khởi động backend**
 
 Vào file crs\main.py
 
@@ -54,7 +54,7 @@ Vào file crs\main.py
 uvicorn src.main:app --reload --port 8001
 ```
 
-`**Bước 2: Khởi động frontend**`
+**Bước 2: Khởi động frontend**
 
 Thực thi file templates\index.html bằng cách khởi chạy live server
 
