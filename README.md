@@ -11,7 +11,7 @@
 * [Yêu cầu hệ thống](#yêu-cầu-hệ-thống)
 * [Thiết lập môi trường](#thiết-lập-môi-trường)
 * [Hướng dẫn sử dụng](#hướng-dẫn-sử-dụng)
-* [Đánh giá sản phẩm](#Đánh-giá-sản-phẩm)
+
 
 ## Giới thiệu về ChatBot 
 
@@ -65,8 +65,4 @@ Thực thi file templates\index.html bằng cách khởi chạy live server
 
 Sau đó, mở trình duyệt, vào đường dẫn [http://127.0.0.1:8001] để bắt đầu đặt câu hỏi với bot.
 
-## Đánh giá sản phẩm
-
-* Chatot tìm cầu trả lời chính xác tới : 59,99% 
-* Bị lỗi phông chữ khi sử dụng ngôn ngữ tiếng việt
 
